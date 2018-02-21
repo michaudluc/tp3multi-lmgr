@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mini Chat </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <link rel="stylesheet" href="layout/styles/layout.css" type="text/css"/>
+</head>
+<body id="top">
+<!-- ####################################################################################################### -->
+<div id="identite-div" class="masque">
+    <div>
+        <h1>Gestion d'identite</h1>
+        <form name="identite-change" action="#">
+            <label for="pseudo"> pseudo</label>
+            <input type="text" name="pseudo" id="pseudo" value=""/>
+            <br/>
+            <label for="age"> age</label>
+            <input type="text" name="age" id="age" value=""/>
+        </form>
+        <div id="button-div">
+            <button onclick="app.masqueIdentite(false)">fermer</button>
+            <button onclick="app.changeIdentity();">changer</button>
+        </div>
+    </div>
+</div>
+
+<!-- ####################################################################################################### -->
+
+<div class="wrapper col1">
+    <div id="header">
+        <div id="logo">
+            <h1><a href="index.html">Mini Chat</a></h1>
+            <p>Multimedia I - C&eacute;gep Limoilou - 420-455-LI</p>
+        </div>
+        <div id="topnav">
+            <ul>
+                <li><a href="http://www.cegeplimoilou.ca">C&eacute;gep limoiou</a></li>
+                <li><a href="#">Salles de chat</a>
+                    <ul>
+                        <li><a href="#">Salle 1</a></li>
+                        <li><a href="#">Salle 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="app.afficheGestion()">Gestion des salles</a></li>
+                <li><a href="#" onclick="app.afficheIdentite()">Identit&eacute;</a></li>
+            </ul>
+        </div>
+        <br class="clear"/>
+    </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2" id="aide-div" class="affiche">
+    <div id="aide-content" class="masque">
+        <div class="fl_left">
+            <h1>Aide ?</h1>
+            <h2>Ajout de message</h2>
+            <p>pour ajouter un message...</p>
+            <p class="readmore"><a href="#" id="pPause" onclick="playPause()">Montre un vid&eacute;o &raquo;</a></p>
+            <button onclick="app.masqueAide()">fermer aide</button>
+        </div>
+        <div class="fl_right">
+                        <video id="video" width="420" height="320" controls>
+                        <source src="videos/AideMiniChat.mp4" type="video/mp4">
+                        </video>
+                      
+                      <script> 
+                      var video = document.getElementById("video"); 
+                      function playPause() { 
+                          if (video.paused) {
+                              video.play();
+                          } else {
+                                  video.pause();
+                          } 
+                      }
+                      </script> 
+        </div>
+    </div>
+    <div id="aide-icone" class="fl_right"><img src="images/interrogation.jpg" width="30" height="30"
+                                               onmouseover="app.afficheAide()"></div>
+    <br class="clear"/>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+    <div id="container">
+        <div id="content">
+            <h2 id="salle">Salle 1</h2>
+            <div class="message patron" id="patron-reception"></div>
+            <div class="message patron" id="patron-envoie"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div><!-- ####################################################################################################### -->
+<div class="wrapper col4">
+    <div id="footer">
+        <div id="newsletter">
+            <h3>Votre pseudo est :<span id="identite-affichee"></span></h3>
+            <form action="#" method="post" name="ajouteMessageForm" onsubmit="return app.submitText()">
+                <fieldset>
+                    <label for="messageContenu">votre message</label>
+                    <textarea name="messageContenu" id="messageContenu" rows="10" cols="30">Saisissez votre message ici...</textarea>
+                    <input type="submit" name="nom" id="nom" value="Envoyer" class="envoyer"/>
+                </fieldset>
+            </form>
+        </div>
+        <div class="footbox">
+            <h2>Pour chatter</h2>
+            <ul>
+                <li><a href="#">1- Ajustez votre identit&eacute;</a></li>
+                <li><a href="#">2- Saisissez votre message</a></li>
+                <li class="last"><a href="#">4- Appuyez sur <em>Envoyer</em></a></li>
+            </ul>
+        </div>
+        <br class="clear"/>
+    </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+    <div id="copyright">
+        <p class="fl_left">Copyright &copy; 2018 - Tout droit r&eacute;serv&eacute; - <a href="#">C&eacute;gep
+            Limoilou</a></p>
+        <br class="clear"/>
+    </div>
+</div>
+
+<!-- ####################################################################################################### -->
+<script src="js/utilitaire.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
+<!-- ####################################################################################################### -->
+</body>
+</html>

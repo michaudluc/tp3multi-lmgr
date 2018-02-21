@@ -1,0 +1,165 @@
+@charset "utf-8";
+/*
+Template Name: Presentable
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Layout CSS
+*/
+
+@import url("navi.css");
+@import url("forms.css");
+
+html{overflow-y:scroll;}
+body{margin:0; padding:0; font-size:12px; font-family:verdana, Arial, Helvetica, sans-serif; color:#FFFFFF; background-color:#585C3F;}
+
+.justify{text-align:justify;}
+.bold{font-weight:bold;}
+.center{text-align:center;}
+.right{text-align:right;}
+.nostart{margin:0; padding:0; list-style-type:none;}
+
+.clear{clear:both;}
+br.clear{clear:both; margin-top:-15px;}
+
+a{outline:none; text-decoration:none;}
+
+.fl_left, .imgl{float:left;}
+.fl_right, .imgr{float:right;}
+
+img{display:block; margin:0; padding:0; border:0;}
+.imgl, .imgr{border:1px solid #666666; padding:5px;}
+.imgl{margin:0 8px 8px 0; clear:left;}
+.imgr{margin:0 0 8px 8px; clear:right;}
+
+/* ----------------------------------------------Wrapper------------------------------------- */
+
+div.wrapper{display:block; width:100%; margin:0; text-align:left;}
+div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{margin:0 0 15px 0; padding:0 0 8px 0; font-size:20px; font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif; border-bottom:1px dotted #362C20;}
+.col1{color:#FFFFFF; background-color:#CBCFB5; border-top:5px solid #362C20;}
+.col2{color:#B6B6B6; background:#362C20;}
+.col2 a{color:#FF9900; background-color:#362C20;}
+.col3{color:#666666; background-color:#CBCFB5;}
+.col4{color:#666666; background-color:#C8CCB3;}
+.col4 a{color:#55392B; background-color:#C8CCB3;}
+.col5, .col5 a{color:#FFFFFF; background-color:#585C3F;}
+
+/* ----------------------------------------------Generalise------------------------------------- */
+
+#header, #intro, #container, #breadcrumb, #footer, #copyright{display:block; position:relative; width:960px; margin:0 auto;}
+
+/* ----------------------------------------------Header------------------------------------- */
+
+#header{padding:10px 0 20px 0; z-index:1000; color:#444444; background-color:#CBCFB5;}
+#header #logo{display:block; float:left; margin-top:8px;}
+#header h1, #header p{margin:0; padding:0;}
+#header h1{margin:0; padding:0; font-size:50px; border:none;}
+#header h1 a{color:#362C20; background-color:#CBCFB5;}
+
+
+#container{padding:20px 0;}
+#container a{color:#FF9900; background-color:#FFFFFF;}
+
+
+/* ----------------------------------------------Identite------------------------------------- */
+#identite-div {
+    background-color: #CBCFB5;
+    z-index: 2000;
+    top: 300px;
+    width: 300px;
+    height: auto;
+    box-shadow: 0px 0px 45px #000000;
+    position: absolute;
+    transition: all 1.5s ease-in-out;
+}
+
+#identite-div h1{text-align: center; color:rgb(255, 153, 0);
+}
+#identite-div #button-div{ align-content: center;margin: 20px;
+}
+#identite-div{ align-content: center;
+}
+#identite-div button{position:static; right:0; bottom:0; z-index: 2001;
+}
+#identite-div form{margin:30px;}
+
+
+/* ----------------------------------------------Gestion------------------------------------- */
+#gestion-div {
+    background-color: #CBCFB5;
+    z-index: 2000;
+    top: 50%;
+    width: 300px;
+    height: auto;
+    box-shadow: 0px 0px 45px #000000;
+    position: absolute;
+    transition: all 1.5s ease-in-out;
+}
+
+#gestion-div.masque{display: none;}
+#gestion-div.affiche { position: fixed; background-color: #CBCFB5; z-index: 2000; top: 25%; padding: 20px;
+	left: 25%; width:300px; height:auto;
+}
+#gestion-div h1{text-align: center; color: rgb(255, 153, 0);
+}
+#gestion-div h2{text-align: center; color:black; text-decoration:underline;}
+
+/* ----------------------------------------------Aide------------------------------------- */
+
+#aide-content button{background-color: rgb(255, 153, 0);
+}
+#aide-content.affiche{ width:100%; display:inline;
+}
+#aide-content.masque{display:none;
+}
+#aide-content ul{ display:inline;list-style-type: none; width:100%;
+}
+#aide-content .fl_right img{display:block; width:420px; height:320px;float:right;}
+
+
+/* ----------------------------------------------Content------------------------------------- */
+#content{display:block; width:100%; height: 300px;
+    min-width: 50px; margin:20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Messages */
+#content .patron{display: none;height: auto;}
+
+#content .message{border-style: solid; border-width: 1px 1px 1px 1px;
+ position: relative; width: 80%; min-height:40px; left: 1000px;
+}
+#content .recu{  border-bottom-right-radius: 2em; padding-left: 2px; background-color: rgb(255, 153, 0); color: white; border-top-right-radius: 2em; left :0%; width: 80%;height: auto;
+    transition: all 1.5s ease-in-out;
+}
+#content .envoye{  border-bottom-left-radius: 2em; padding-right: 2px; background-color: black; color: rgb(255, 153, 0);text-align: right; left: 20%; border-top-left-radius: 2em; width: 80%; height: auto;
+    transition: all 1.5s ease-in-out;
+}
+#content p{ margin: 5px 30px 5px 30px;
+}
+#content .message .recu .userID{ display: inline-block; width: auto; float: left; color: black;
+}
+#content .message .envoye .userID{ display: inline-block; width: auto; float: right; color:  white;
+}
+#content .message-date-recu{ display: inline-block; float: left; color: gray;
+}
+#content .message-date-envoye{ display: inline-block; float: right; color: gray;
+}
+
+
+/* ----------------------------------------------Footer------------------------------------- */
+
+#footer{padding:20px;}
+#footer h2{margin-bottom:10px; border-bottom-color:#98989A;}
+#footer p, #footer ul, #footer a{margin:0; padding:0; font-weight:normal; list-style:none; line-height:normal;}
+#footer .footbox{display:block; float:right; width:190px; margin:0 0 0 15px; padding:0;}
+#footer li{margin-bottom:3px;}
+#footer .last{margin:0;}
+#newsletter{display:block; float:left; width:300px;}
+
+/* ----------------------------------------------Copyright------------------------------------- */
+
+#copyright{padding:10px 0;}
+#copyright p{margin:0; padding:0;}
